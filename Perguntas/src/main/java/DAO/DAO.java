@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import modelo.Perguntas;
+
 
 public class DAO {
 
@@ -37,4 +39,10 @@ return cnx;
 
 
 }
+
+	public static Perguntas PerguntasDAO(String pergunta, String respostacerta, String respostaerr1,
+			String respostaerr2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
