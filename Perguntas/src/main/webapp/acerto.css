@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+
+
+.content{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+	widht:100%;
+	height:100vh;
+}
+
+.card{
+	background:#fff;
+	border-radius:20px;
+	box-shadow:0px 4px 25px #26395338;
+	
+	
+}
+
+.mediaCard{
+	background:url(https://qualyteam.com/pb/wp-content/uploads/2011/05/check.jpg);
+	height:400px;
+	width:100%;
+}
+
+.topCard{
+	padding:40px;
+	padding-top:0px;
+	
+}
+.bottomCard{
+	padding:40px;
+}
+
+.actions{
+	padding : 15px 30px;
+	font-size:20px;
+	background-color: black;
+	border:1px solid black;
+	border-radius:35px;
+	cursor:pointer;
+	color:#fff;
+	transition:0.5s;
+	outline:0;
+	position:center;
+}
+.actions[type="button"]:hover{
+	background-color: white;
+	color: black;
+	
+}

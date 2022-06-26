@@ -1,5 +1,6 @@
 @charset "ISO-8859-1";
 
+
 *{
 	padding:0;
 	margin:0;
@@ -15,13 +16,22 @@
 .rTable{
 	width:100%;
 	text-align:center;
+	font-size:30px;
 }
-.thead {
+.rTable thead {
 	background: black; font-weight: bold; color:#fff;
+	text-align:center;
+}
+.rTable tbody tr:nth-child(4n){
+	
+	font-weight: bold;
+	 color:#fff;
+	background: black;
+	font-size:30px;
+	text-align:center;
 }
 
-
-div.container{
+.container{
 	width:100%;
 	height:100vh;
 	display: flex;
@@ -31,17 +41,34 @@ div.container{
 
 input[type="button"]{
 	padding : 15px 30px;
+	font-size:20px;
+	background-color: black;
+	border:1px solid black;
+	border-radius:35px;
+	cursor:pointer;
+	color:#fff;
+	transition:0.5s;
+	outline:0;
+	
 }
 
-
+input[type="button"]:hover{
+	background-color: white;
+	color: black;
+	
+}
 
 @media screen and (max-width: 480px){
-		
-}
+		.content{width: 94%;}
+
 
 @media only screen and (min-width: 1200px){
 	.content{width:100%;}
-	
-	
+	.rTable th , .rTable td{padding:7px 0;}
+	.rTable tbody td:nth-child(1){width:10%;}
+	.rTable tbody td:nth-child(2){width:30%;}
+	.rTable tbody td:nth-child(3){width:20%;}
+	.rTable tbody td:nth-child(4){width:15%;}
+	.rTable tbody td:nth-child(5){width:25%;}
 		
-}
+}}

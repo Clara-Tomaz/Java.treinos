@@ -7,24 +7,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Menu</title>
+<link rel="stylesheet" href="tabela.css">
 </head>
 <body>
-	<%String coisa = (String)session.getAttribute("PerguntasSession"); %>
+	<%String coisa = (String)session.getAttribute("PerguntasSession");%>
 
 	<h2>
 		Bem vindo ao sistema,
-		<%=coisa %></h2>
+		</h2>
 
-	<div>
+	<div >
 		<h2>Lista de Perguntas</h2>
 	</div>
 	<div>
-		<table border=1>
-			<tr>
-				<th>Perguntas</th>
-				
+		<table border=1  class="rTable">
+		<thead>
 			
-			</tr>
 
 			<%
 			PerguntasDAO dao = new PerguntasDAO();
@@ -35,8 +33,10 @@
 			for(Perguntas perguntas: lista){%>
 			<tr>
 				<td><%=perguntas.getPergunta() %></td>
-
+			</thead>
+<tbody>
 			</tr>
+
 
 		   <tr>    
 			<td><a href ="erro.jsp"><input type="button" value="<%=perguntas.getRespostaerr1()%>"/></a></td>
@@ -50,13 +50,15 @@
 				
 			</tr>
 				<tr>
-					<td><a href ="erro.jsp"><input type="button" value="<%=perguntas.getRespostaerr2()%>"/></a></td>
+					<td><a href ="erro.jsp"><input type="button" id="container" value="<%=perguntas.getRespostaerr2()%>"/></a></td>
 			</tr>
+
 
 			<%
 			}
 			%>
 		</table>
+		</tbody>
 		<div>
 			<nav>
 				<ul>
